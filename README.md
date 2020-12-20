@@ -44,10 +44,28 @@ Greetings
 	puts "Hi, welcome to Tofu's Cafe ^_^."
 	puts " "
 	print_options()
-end`
- 
+end`\
+This line of code allows the greetings and then prints the method or the menu options.
+
+`def print_options()
+	puts "-"*40
+	puts " "
+    puts "Special Menu:"
+    puts " "
+	$item_names.map do |k,v| 
+		next if v == 'Quit'
+		puts "Item: #{v} 	Price: $#{$cost_price[k]}"
+	end
+	puts "-"*40
+end`\
+
+This code allows prints the menu for the customer so they can browse and use other options
+
+
+
  <br>
  <br>
+
 ## User Interaction
 
 These are the features that I added. When the application is running there is a welcome message, with the menu displayed. The customers can choose whether they would like to order or cancel the order. Once proceeding with the order, the customers can select what they want, then the quantity they want. After adding the quantity, there will be an option of if they want to add more items, cancel the order or they have finished with the order. Now when the selection is done the total bill is shown with the items and displays thank you for coming.
