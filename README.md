@@ -196,6 +196,8 @@ The staff mode used will be hidden and the staff member just needs to type stuff
 https://drive.google.com/file/d/1qFMDJ3jqLIHwTkPYDZhjvu1PsChuSejZ/view?usp=sharing
 
 ## Implementation plan
+https://trello.com/invite/b/FiYYuB5e/8121cb4f392377b75e9c4dbea83f8fa3/it-project-workflow 
+<br>
 ## How to run
 ### System requirements 
 ***Ruby 2.6xx installed***\
