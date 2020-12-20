@@ -20,3 +20,16 @@ def main()
 	end
   system "clear"
 
+  def print_options() #This method is where the menu will show up for their options 
+	puts "-"*40
+	puts " "
+    puts "Special Menu:"
+    puts " "
+	$item_names.map do |k,v| 
+		next if v == 'Quit'
+		puts "Item: #{v} 	Price: $#{$cost_price[k]}"
+	end
+	puts "-"*40
+end
+
+
