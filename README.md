@@ -34,3 +34,6 @@ The features that I have done are:
 10.     Thanks for coming
 
 
+These are the features that I added. When the application is running there is a welcome message, with the menu displayed. The customers can choose whether they would like to order or cancel the order. Once proceeding with the order, the customers can select what they want, then the quantity they want. After adding the quantity, there will be an option of if they want to add more items, cancel the order or they have finished with the order. Now when the selection is done the total bill is shown with the items and displays thank you for coming.
+ 
+The staff mode used will be hidden and the staff member just needs to type stuff at the beginning. The message will be displayed and you are now in staff mode. In staff mode, the member will be able to choose whether to add, remove or change items. After this is complete the staff member can exit the staff mode and see the changes they have made.
