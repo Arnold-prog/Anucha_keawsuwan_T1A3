@@ -65,3 +65,23 @@ def get_order() # This methodd is for customers to add quantity and has an exit 
       print_order($order_hash)
       quit = follow_up()
       end
+      #for the exit farewell and option to exit
+      system "clear"
+      print_order($order_hash)
+      puts " "
+      puts "Thank you for visitings Tofu's Cafe"
+      puts "Type 'quit' to exit."
+      print "Input: "; exit = gets.strip.downcase[0]
+      exit == "q" ? (return true) : (return false)          
+  end
+
+  def calculate_total_bill(order_hash) #Method show order and show total as integer
+	total = 0
+	order_hash.map do
+		|k,v|
+		total += $cost_price[k] * v
+	end
+	return total
+end
+
+
