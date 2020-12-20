@@ -201,3 +201,18 @@ def staff_add_item()#Metho for staff to add items.
 	$item_names[new_item[0]] = new_item.capitalize
 	return false
 end
+
+def staff_remove_item()#Method for staff to remove items.
+	print_staff()
+	puts " "
+	puts "What item would you like to remove?"
+	$item_names.each_value do |v|
+		next if v == "Quit"
+		puts "[#{v[0]}]#{v[1..v.length]}"
+	end
+	puts " "
+	print "Input: "; rem = gets.strip.downcase
+	$item_names.delete(rem[0])
+	$cost_price.delete(rem[0])
+	return false
+end
