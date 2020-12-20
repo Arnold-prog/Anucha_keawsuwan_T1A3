@@ -16,7 +16,7 @@ The purpose was in this application was to fill out all the needs stated in the 
  
 The issues that are trying to be resolved is, to allow the café to operate without high amounts of staff. For example, the way they use the vending machine to take orders in Japan. This was a high inspiration as when visiting there. I fell in love with the ease of ordering, you would just select what you wanted, pay for it there and hand the ticket to the staff member and your order would be brought to your table. I chose to develop something similar but in an app form.
  
-The target audience is customers, who do not want to talk to people (introverted people). Customers that may not know how to order, so there are instructions for them to follow.
+The target audience is customers, who do not want to talk to people (introverted people). Customers that may not know how to order, so there are instructions for them to follow. The application is also for the cafe to use as now is a time where people prefer not to be close one another, due to 'COVID-19'. This will greatly keep the spread of germs down and aswell provide the cafe with a way to use less staff and boost gross profit. 
  
 ## Features
 
