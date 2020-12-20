@@ -131,3 +131,18 @@ def follow_up() #Method follow up if the input is not correct shows again.
 		follow_up()
 	end
 end
+
+def print_intro()# Welcome method.
+    system "clear"
+	puts "Hi, welcome to Tofu's Cafe ^_^."
+	puts " "
+	print_options()
+end
+
+def confirm_quit() #Method to confirm quit
+	system "clear"
+	puts "Are you sure you want to exit?"
+	puts "y/n"
+	print "Input: "; ans = gets.strip.downcase[0]
+	ans == 'y' ? (return true) : (return false)	
+end
