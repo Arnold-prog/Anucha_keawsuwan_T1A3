@@ -32,7 +32,23 @@ The features that I have done are:
 8.      Remove item to the menu
 9.      Exit
 10.     Thanks for coming
+<br>
+Code to go with the options
+<br>
+<br>
 
+Greetings
+
+ `def print_intro()
+    system "clear"
+	puts "Hi, welcome to Tofu's Cafe ^_^."
+	puts " "
+	print_options()
+end`
+ 
+ <br>
+ <br>
+## User Interaction
 
 These are the features that I added. When the application is running there is a welcome message, with the menu displayed. The customers can choose whether they would like to order or cancel the order. Once proceeding with the order, the customers can select what they want, then the quantity they want. After adding the quantity, there will be an option of if they want to add more items, cancel the order or they have finished with the order. Now when the selection is done the total bill is shown with the items and displays thank you for coming.
  
