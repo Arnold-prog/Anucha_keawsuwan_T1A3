@@ -161,6 +161,20 @@ This feature allows the staff member to remove item.
 
  This code allows staff to change the price.
 
+`def staff_add_item()
+	print_staff()
+	puts " "
+	puts "What is the new item you would like to add to menu?"
+	print "Input: "; new_item = gets.strip.downcase
+	puts " "
+	puts "What is the price of this item?"
+	print "Input: "; new_price = gets.strip.to_i
+	$cost_price[new_item[0]] = new_price
+	$item_names[new_item[0]] = new_item.capitalize
+	return false end `\
+ This code allows the staff memebers to add new menu item.
+
+`
 
 
 
