@@ -174,14 +174,14 @@ This feature allows the staff member to remove item.
 	return false end `\
  This code allows the staff memebers to add new menu item.
 
-`
-
-
-
-    
-
-
-
+`system "clear"
+	print_order($order_hash)
+	puts " "
+	puts "Thank you for visitings Tofu's Cafe"
+	puts "Type 'quit' to exit."
+	print "Input: "; exit = gets.strip.downcase[0]
+	exit == "q" ? (return true) : (return false)end`\
+This line of code is used for the exit and farewell. Remember Greeting and Farewells are important for customer retention!
 
  <br>
  <br>
@@ -191,3 +191,10 @@ This feature allows the staff member to remove item.
 These are the features that I added. When the application is running there is a welcome message, with the menu displayed. The customers can choose whether they would like to order or cancel the order. Once proceeding with the order, the customers can select what they want, then the quantity they want. After adding the quantity, there will be an option of if they want to add more items, cancel the order or they have finished with the order. Now when the selection is done the total bill is shown with the items and displays thank you for coming.
  
 The staff mode used will be hidden and the staff member just needs to type stuff at the beginning. The message will be displayed and you are now in staff mode. In staff mode, the member will be able to choose whether to add, remove or change items. After this is complete the staff member can exit the staff mode and see the changes they have made.
+
+## Flow chart
+https://drive.google.com/file/d/1qFMDJ3jqLIHwTkPYDZhjvu1PsChuSejZ/view?usp=sharing
+
+## Implementation plan
+
+## Instructions for use
