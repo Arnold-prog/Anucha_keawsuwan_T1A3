@@ -44,7 +44,8 @@ Greetings
 	puts "Hi, welcome to Tofu's Cafe ^_^."
 	puts " "
 	print_options()
-end`\
+end
+`\
 This line of code allows the greetings and then prints the method or the menu options.
 
 `def print_options()
@@ -57,7 +58,8 @@ This line of code allows the greetings and then prints the method or the menu op
 		puts "Item: #{v} 	Price: $#{$cost_price[k]}"
 	end
 	puts "-"*40
-end`\
+end
+`\
 
 This code allows prints the menu for the customer so they can browse and use other options
 
@@ -72,8 +74,98 @@ This code allows prints the menu for the customer so they can browse and use oth
 		sleep 1
 		ask_amount()
 	end
-	return amount end `\
+	return amount end 
+    `\
 This code gives the customer the option to add quantity and if there is nothing gives them an error. Delays for one second and allows the customer to try again. 
+
+`def print_order(order_hash)
+	puts " "
+	puts "Your current order:"
+	if $order_hash.empty?
+		puts "There is nothing currently in your order."
+	else
+		$order_hash.map do |k,v| 
+			puts "x #{v}	#{$item_names[k]} 	= $#{v * $cost_price[k]}"
+		end
+	end
+	puts " "
+	puts "	Total Bill: $#{calculate_total_bill($order_hash)}"	
+	puts "-"*40
+	return end 
+    `\
+
+This line of code is for the feature where it prints out the final total for the customer and then allows for customers that have not added anything to cart to do it.
+
+`def staff_mode()
+	system "clear"
+	puts "You're in staff mode now!"
+	puts "To continue, please enter password."
+	print "Input: "; pass = gets.strip
+	if pass == $password
+		exit = false
+		until exit
+		print_staff()
+		option = staff_options()
+			case option
+				when "a"
+					exit = staff_add_item()
+				when "r"	
+					exit = staff_remove_item()
+				when "c"
+					exit = staff_change_price()
+				when "e"
+					exit = true
+			end 
+		end
+	else 
+		puts "Access Denied!"
+		sleep 3
+		return true
+	end 
+	return false end`
+
+This method is for the staff menu of the app. This feature is hidden and protected by a password. The password is password.
+
+ `def staff_remove_item()
+	print_staff()
+	puts " "
+	puts "What item would you like to remove?"
+	$item_names.each_value do |v|
+		next if v == "Quit"
+		puts "[#{v[0]}]#{v[1..v.length]}"
+	end
+	puts " "
+	print "Input: "; rem = gets.strip.downcase
+	$item_names.delete(rem[0])
+	$cost_price.delete(rem[0])
+	return false end
+    `\ 
+
+This feature allows the staff member to remove item. 
+
+` def staff_change_price()
+	print_staff()
+	puts " "
+	puts "What item would you like to change the price of?"
+	$item_names.each_value do |v|
+		next if v == "Quit"
+		puts "[#{v[0]}]#{v[1..v.length]}"
+	end
+	puts " "
+	print "Input: "; change = gets.strip.downcase
+	puts " "
+	puts "What is the new price of the item?"
+	print "Input: "; change_price = gets.strip.to_i
+	$cost_price[change[0]] = change_price
+	return false end `\ 
+
+ This code allows staff to change the price.
+
+
+
+
+    
+
 
 
 
