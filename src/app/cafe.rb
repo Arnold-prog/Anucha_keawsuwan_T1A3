@@ -177,7 +177,7 @@ def staff_mode() #Metho for staff mode allows add, remove and change menu.
 	return false
 end
 
-def staff_options()
+def staff_options()#Method for staff options.
 	puts " "
     puts "Do you want to.. Type the first word to begin"
 	puts "Add an item?"
@@ -187,4 +187,17 @@ def staff_options()
 	puts " "
 	print "Input: "; option = gets.strip.downcase[0]
 	return option
+end
+
+def staff_add_item()#Metho for staff to add items.
+	print_staff()
+	puts " "
+	puts "What is the new item you would like to add?"
+	print "Input: "; new_item = gets.strip.downcase
+	puts " "
+	puts "What is the price of this item?"
+	print "Input: "; new_price = gets.strip.to_i
+	$cost_price[new_item[0]] = new_price
+	$item_names[new_item[0]] = new_item.capitalize
+	return false
 end
