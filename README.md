@@ -1,4 +1,4 @@
-GitHub Link - 
+GitHub Link - https://github.com/Arnold-prog/Anucha_keawsuwan_T1A3
 
 # Ruby Command Line Assignment
 
