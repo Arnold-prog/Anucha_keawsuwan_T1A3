@@ -146,3 +146,33 @@ def confirm_quit() #Method to confirm quit
 	print "Input: "; ans = gets.strip.downcase[0]
 	ans == 'y' ? (return true) : (return false)	
 end
+
+def staff_mode() #Metho for staff mode allows add, remove and change menu.
+	system "clear"
+	puts "You're in staff mode now!"
+	puts "To continue, please enter password."
+	print "Input: "; pass = gets.strip
+	
+	if pass == $password
+		exit = false
+		until exit	
+		print_staff()
+		option = staff_options()
+			case option
+				when "a"
+					exit = staff_add_item()
+				when "r"	
+					exit = staff_remove_item()
+				when "c"
+					exit = staff_change_price()
+				when "e"
+					exit = true
+			end
+		end 
+	else 
+		puts "Access Denied!"
+		sleep 3
+		return true
+	end 
+	return false
+end
