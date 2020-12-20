@@ -196,4 +196,7 @@ The staff mode used will be hidden and the staff member just needs to type stuff
 https://drive.google.com/file/d/1qFMDJ3jqLIHwTkPYDZhjvu1PsChuSejZ/view?usp=sharing
 
 ## Implementation plan
-
+## How to run
+### System requirements 
+***Ruby 2.6xx installed***\
+```Gem install```
