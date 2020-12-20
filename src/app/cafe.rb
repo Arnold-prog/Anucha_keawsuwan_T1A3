@@ -4,4 +4,19 @@ $order_hash = {}
 $password = "password"
 #Some main hashes
 
+def main() 
+	quit = false
+	until quit
+		print_intro()
+		resp = user_option()
+		case resp
+			when "o"
+				quit = get_order()
+			when "q"
+				quit = confirm_quit()
+			when "s"
+				quit = staff_mode()
+		end
+	end
+  system "clear"
 
