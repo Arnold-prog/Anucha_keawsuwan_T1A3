@@ -84,4 +84,35 @@ def get_order() # This methodd is for customers to add quantity and has an exit 
 	return total
 end
 
+def ask_amount()#Method to ask for quantity of order.
+	puts " "
+	puts "How many would you like to order?"
+	print "Input: "; amount = gets.strip.to_i
+	puts " "
+	if amount == 0 || Integer(amount) == nil
+		puts "Sorry, that is an invalid input."
+		sleep 1
+		ask_amount()
+	end	
+	return amount
+end
+
+def ask_order() # ask for order, gives exit option.
+	puts " "
+	puts "What would you like to order? Or type 'quit' to exit."
+	str = ""
+	$item_names.each_value{|v| str+= "[#{v[0]}]#{v[1..v.length]}, " if v != "Quit"}
+	puts str.delete_suffix(', ')
+	print "Input: "; order = gets.strip.downcase[0]
+
+	unless order == "l" || order == "t" || order == "s" || $item_names.key?(order) #if error gives them a way to go again
+		puts "Sorry that is not a valid order. Please try again."
+		sleep 2
+		system "clear"
+		print_intro()
+		print_order($order_hash)
+		ask_order()
+	end	
+	return order
+end
 
