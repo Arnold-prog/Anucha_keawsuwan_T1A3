@@ -206,7 +206,7 @@ https://drive.google.com/file/d/1qFMDJ3jqLIHwTkPYDZhjvu1PsChuSejZ/view?usp=shari
 2.      Clone the repository from the link provided at the top
 3.      Run command $ bundle
 4.      Then run command 
-5.     	$ ruby cafe.rb
+5.    	$ ruby cafe.rb
 
 Thank you,
 Anucha Keawsuwan
