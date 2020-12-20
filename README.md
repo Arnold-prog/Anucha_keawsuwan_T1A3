@@ -61,6 +61,20 @@ end`\
 
 This code allows prints the menu for the customer so they can browse and use other options
 
+` def ask_amount()
+	puts " "
+	puts "How many would you like to order?"
+	print "Input: "; amount = gets.strip.to_i
+	puts " " `
+
+`if amount == 0 || Integer(amount) == nil
+		puts "Sorry, that is an invalid input."
+		sleep 1
+		ask_amount()
+	end
+	return amount end `\
+This code gives the customer the option to add quantity and if there is nothing gives them an error. Delays for one second and allows the customer to try again. 
+
 
 
  <br>
