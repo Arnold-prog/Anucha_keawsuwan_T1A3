@@ -116,3 +116,18 @@ def ask_order() # ask for order, gives exit option.
 	return order
 end
 
+def follow_up() #Method follow up if the input is not correct shows again.
+    puts "To continue ordering type 'continue'"
+    puts "To finish ordering tpye 'finished'"
+	print "Input: "; resp = gets.strip.downcase[0]
+	if resp == 'c'
+		print_intro()
+		print_order($order_hash)
+		return
+	elsif resp == 'f'
+		return true
+	else
+		puts "Sorry that is not a valid response."
+		follow_up()
+	end
+end
