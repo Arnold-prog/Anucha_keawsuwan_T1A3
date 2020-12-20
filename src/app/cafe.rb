@@ -176,3 +176,15 @@ def staff_mode() #Metho for staff mode allows add, remove and change menu.
 	end 
 	return false
 end
+
+def staff_options()
+	puts " "
+    puts "Do you want to.. Type the first word to begin"
+	puts "Add an item?"
+	puts "Remove an item?"
+	puts "Change prices?"
+	puts "Exit?"
+	puts " "
+	print "Input: "; option = gets.strip.downcase[0]
+	return option
+end
